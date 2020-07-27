@@ -1,0 +1,65 @@
+<app-nav></app-nav>
+
+<br>
+
+
+    Search by name : <input type="text" name="filterPost" [(ngModel)]="filterPost">
+    <br>
+    <br>
+    <table class="table table-bordered">
+
+
+      <thead style="background-color:#1565C0;color: white ">
+          <tr class="thead-dark">
+              <td colspan="12" >
+                <b>Notas</b>
+
+              </td>
+        <tr  >
+            <th scope="col">Usuario</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Actualizar</th>
+            <th scope="col">Eliminar</th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of notes | filter:filterPost">
+          <td>{{item.firstName}} {{item.lastName}}</td>
+          <td>{{item.emailId}}</td>
+
+
+          <td>
+
+            <!-- <button #msg1 [attr._id]="item._id" [attr.nombre]="item.nombre" [attr.texto]="item.texto" (click)='actualizarNote(msg1)' >
+                <img  width="50px" height="50px" src="../../../assets/512/edit.png" alt="" srcset="">
+            </button> -->
+
+            <button (click)='actualizarNote(item)' >
+                <img  width="50px" height="50px" src="../../../assets/512/edit.png" alt="" srcset="">
+            </button>
+
+
+
+
+            </td>
+
+            <td>
+                <button (click)='eliminareNote(item.id)' >
+                    <img  width="50px" height="50px" src="../../../assets/512/trash-b.png" alt="" srcset="">
+                </button>
+             </td>
+
+        </tr>
+      </tbody>
+
+
+      <tfoot style="background-color:#1565C0;color: white ">
+          <tr class="thead-dark">
+            <td colspan="12" >
+              <b></b>
+
+            </td>
+          </tr>
+        </tfoot>
+    </table>

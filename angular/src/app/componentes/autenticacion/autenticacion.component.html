@@ -1,0 +1,21 @@
+<app-nav></app-nav>
+
+<h3>Login</h3>
+
+
+
+    <!-- <div class="col-12 centrado "> -->
+ <div class="col-12 ">
+            <!-- [formGroup]="loginForm" (ngSubmit)="login()"-->
+        <form  class="was-validated" [formGroup]="angForm" (ngSubmit)="login()" >
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email *" formControlName="name" required/>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Your Password *" formControlName="pass" required/>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btnSubmit" value="Login" [disabled]='!angForm.valid'>
+            </div>
+        </form>
+</div>

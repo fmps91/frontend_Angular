@@ -1,0 +1,136 @@
+
+
+<div [ngSwitch]="session">
+
+    <div *ngSwitchCase="true">
+
+  <nav class="mb-1 navbar navbar-expand-md" style="background-color:#1565C0;color: white " >
+  <a class="navbar-brand" href="/main"><b>SGD</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <span class="navbar-toggler-icon" style="background-color: white;color: tomato"></span> -->
+    <img width="50px" height="50px" src="../../../assets/512/navicon.png" alt="">
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/main"><b>Main</b>
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{this.nav[0]}}"><b>{{this.nav[0]}}</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{this.nav[1]}}"><b>{{this.nav[1]}}</b></a>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{this.nav[2]}}"><b>{{this.nav[2]}}</b></a>
+      </li>
+
+
+
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <!-- <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fab fa-twitter"></i>
+        </a>
+    </li> -->
+    <!--   <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+      </li> -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <img src="../../../assets/src/android-person.svg" width="25" height="25" alt="" srcset="" >
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-default"
+          aria-labelledby="navbarDropdownMenuLink-333">
+          <a class="dropdown-item" [routerLink]="['/perfil', id]"><b>{{this.nav[3]}}</b></a>
+          <!-- <a class="dropdown-item" href="{{this.nav[3]}}">{{this.nav[3]}}</a> -->
+         <!--  <a class="dropdown-item" href="{{this.nav[4]}}">{{this.nav[4]}}</a> -->
+         <button class="dropdown-item" (click)="CerrarSession()"><b>{{this.nav[4]}}</b></button>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+<div *ngSwitchCase="false">
+
+    <nav class="mb-1 navbar navbar-expand-md " style="background-color:#1565C0;color: white ">
+    <a class="navbar-brand" href="#">SGD</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+      aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+      <img width="50px" height="50px" src="../../../assets/512/navicon.png" alt="">
+
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+      <ul class="navbar-nav mr-auto">
+
+
+        <li class="nav-item active">
+          <a class="nav-link" href="{{this.nav[1]}}"><b>{{this.nav[1]}}</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{this.nav[2]}}"><b>{{this.nav[2]}}</b></a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="{{this.nav[3]}}"><b>{{this.nav[3]}}</b></a>
+        </li> -->
+       <!--  <li class="nav-item">
+          <a class="nav-link" href="{{this.nav[4]}}"><b>{{this.nav[4]}}</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{this.nav[5]}}"><b>{{this.nav[5]}}</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{this.nav[6]}}"><b>{{this.nav[6]}}</b></a>
+        </li> -->
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Dropdown
+          </a>
+          <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+      </ul>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <!-- <li class="nav-item">
+          <a class="nav-link waves-effect waves-light">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link waves-effect waves-light">
+            <i class="fab fa-google-plus-g"></i>
+          </a>
+        </li> -->
+       <!--  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-default"
+            aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+</div>
+</div>
+
+<!--/.Navbar -->

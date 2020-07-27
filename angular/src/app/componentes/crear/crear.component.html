@@ -1,0 +1,39 @@
+<app-nav></app-nav>
+
+<h3>Crear Nota</h3>
+
+<!-- <div class="col-12 "> -->
+
+<form class="was-validated" [formGroup]="angForm" (ngSubmit)="createNote()">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Name of the note *" formControlName="nombre" required />
+  </div>
+
+  <div class="form-group">
+    <textarea class="form-control" rows="5" placeholder="Text of the note" formControlName="texto" required></textarea>
+
+    <!-- <input type="text" class="form-control" placeholder="Text of the note" formControlName="texto" required /> -->
+  </div>
+
+
+  <div class="form-group">
+    <input type="submit" class="btnSubmit" value="Guardar" [disabled]='!angForm.valid' />
+  </div>
+  <div class="form-group">
+    <input type="button" value="Borrar" (click)="borrar()" />
+  </div>
+</form>
+
+
+
+<div *ngIf="message==true; else elseBlock">
+    <div  class="alert alert-success alert-dismissible fade show" role="alert">Nota creada
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+</div>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
+
+
+<!-- </div> -->

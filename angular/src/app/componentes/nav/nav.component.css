@@ -1,0 +1,47 @@
+
+a.nav-link{
+  color: white;
+
+}
+
+a.navbar-brand{
+  color: white;
+}
+
+.navbar-light .navbar-brand:hover{
+    background-color: #4f6377;
+
+}
+
+.nav-link:hover{
+    background-color: #4f6377;
+    color: black;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: black;
+}
+
+nav.bg-light{
+    background-color: #166ec5!important;
+
+}
+
+
+.navbar-light .navbar-brand{
+    color: black;
+
+}
+
+.navbar-light .navbar-brand:hover{
+    color: black;
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color:black;
+}
+
+.mb-1, .my-1 {
+    background-color: #166ec5;
+}
+
