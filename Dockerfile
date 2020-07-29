@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY /angular/. /app
 #VOLUME /app
-#RUN npm install
+RUN npm install
 #COPY ./ /app
 #COPY /angular/. /app
 RUN npm run build -- --prod
