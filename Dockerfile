@@ -4,7 +4,7 @@ FROM node:lts-alpine3.12 as node
 
 WORKDIR /app
 COPY /angular/. /app
-RUN npm install
+#RUN npm install
 #COPY ./ /app
 #COPY /angular/. /app
 RUN npm run build -- --prod
