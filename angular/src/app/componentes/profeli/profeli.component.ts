@@ -3,6 +3,7 @@ import { SessionService } from 'src/app/servicios/session.service';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import * as $ from 'jquery';
+import { UsuarioService } from 'src/app/servicios/usuario.service';
 //import $ from 'jquery';
 
 declare var $: any;
@@ -15,9 +16,12 @@ export class ProfeliComponent implements OnInit,AfterViewInit,AfterContentChecke
 
   User:any;
   message=true;
+  ip_adres: any;
   constructor(
     private session: SessionService,
-    private router: Router
+    private router: Router,
+    public ip: UsuarioService,
+
   ) { }
 
   ngOnInit() {
@@ -29,7 +33,12 @@ export class ProfeliComponent implements OnInit,AfterViewInit,AfterContentChecke
     this.User=this.session.obtenerName()
     console.log(this.session.obtenerName());
 
-
+    this.ip.getIPAddress().subscribe(res=>{
+      this.ip_adres=res['ip']
+      console.log("ip "+ res['ip']);
+      
+      
+    })
 
   }
 

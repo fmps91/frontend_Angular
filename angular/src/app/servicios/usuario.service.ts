@@ -33,6 +33,11 @@ export class UsuarioService {
     this.url = `${environment.base}`;
   }
 
+  public getIPAddress()  
+  {  
+    return this.http.get("http://api.ipify.org/?format=json");  
+  } 
+
   urlShow() {
     console.log('url: ', this.url);
   }
