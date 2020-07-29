@@ -1,12 +1,10 @@
 
-FROM node:lts-alpine3.12 as node
+#FROM node:lts-alpine3.12 as node
 #FROM ubuntu:16.04 as node
+FROM node:current-alpine3.12 as node
 
 WORKDIR /app
-COPY /angular/package.json /app
-RUN npm install
-COPY ./ /app
-#COPY /angular/. /app
+COPY /angular/. /app
 RUN npm run build -- --prod
 
 FROM nginx:alpine

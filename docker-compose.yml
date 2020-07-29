@@ -68,8 +68,8 @@ services:
     #  - ./gestion_users.sql:/docker-entrypoint-initdb.d/schema.sql 
 
 
-networks:
-  front-tier:
-  back-tier:
+# networks:
+#   front-tier:
+#   back-tier:
 
     
