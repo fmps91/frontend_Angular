@@ -3,7 +3,9 @@ FROM node:lts-alpine3.12 as node
 #FROM ubuntu:16.04 as node
 
 WORKDIR /app
+VOLUME /app
 COPY /angular/. /app
+
 #RUN npm install
 #COPY ./ /app
 #COPY /angular/. /app
