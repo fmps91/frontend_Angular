@@ -9,7 +9,7 @@ services:
     
     environment:
     ports:
-      - 8092:80
+      - 8092:80 #puerto de origen
     #command: sh -c "dockerize -wait tcp://postgres:8091 -timeout 300s -wait-retry-interval 30s /sayhello"
     #networks:
       #- my-net
@@ -63,7 +63,7 @@ services:
     #  - POSTGRES_DB=users
     #  - PGDATA=/var/lib/postgresql/data/pgdata
 
-    #volumes:
+    #volumenes:
       #- ./postgres.conf:/etc/postgresql/postgresql.conf
     #  - ./gestion_users.sql:/docker-entrypoint-initdb.d/schema.sql 
 

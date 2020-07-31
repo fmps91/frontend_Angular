@@ -1,4 +1,4 @@
-
+#ejecuta ciertas instrucciones de las cuales se va a generar un servicio de node
 FROM node:lts-alpine3.12 as node
 #FROM ubuntu:16.04 as node
 
