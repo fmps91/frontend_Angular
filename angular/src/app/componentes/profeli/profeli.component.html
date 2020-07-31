@@ -4,13 +4,42 @@
 <h1>Bienvenido </h1>
 <h2>{{User}}</h2>
 
+<!-- <h2>{{ip_adres}}</h2>
+ -->
 
-<div class="alert alert-success alert-dismissible fade show" role="alert">session iniciada
+
+<!--  <div [ngSwitch]="session">
+
+  <div *ngSwitchCase="true"> -->
+
+<!-- <div class="alert alert-success alert-dismissible fade show" role="alert">session iniciada
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
-</div>
+</div> -->
 <!-- <div class="alert alert-success" role="alert" *ngIf="message==true"> session iniciada</div>
  -->
 <!-- <ng-template class="alert alert-success alert-dismissible fade show" role="alert"  [ngIf]="message==true"><div>Content to render when condition is
   true.</div></ng-template> -->
+<!--   <div [ngSwitch]="rol">
+
+    <div *ngSwitchCase="'admin'"></div> -->
+
+  <div class="card-deck" >
+    <div class="" *ngFor="let note of modulos">
+    <div class="card" >
+  
+        <div class="card-body" >
+          <h5 class="card-title">{{note.name}}</h5>
+          <p class="card-text">{{note.value}}</p>
+          <div *ngFor="let item of note.acceso">
+            <!-- <p class="card-text">{{item}}</p> -->
+            <a class="navbar-brand" href="{{item}}">{{item}}</a>
+
+
+          </div>
+         <!--  <p class="card-text"><small class="text-muted">user add the system</small></p> -->
+        </div>
+      </div>
+      </div>
+    </div>

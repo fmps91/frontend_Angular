@@ -1,0 +1,13 @@
+[
+	{
+		"name": "gestion de medicos",
+		"value": "medico",
+		"acceso":[
+			
+			"reservar_cita",
+			"registro_examenes",
+			"historia_clinica",
+			"registro_receta"
+		]
+	}
+]

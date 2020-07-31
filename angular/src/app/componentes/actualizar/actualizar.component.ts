@@ -68,10 +68,11 @@ export class ActualizarComponent implements OnInit {
   }
 
   borrar() {
-    /* this.angForm = this.fb.group({
-      nombre: ['', Validators.required],
-      texto: ['', Validators.required]
-    }); */
+    this.angForm = this.fb.group({
+      firstName: [, Validators.required],
+      lastName: [, Validators.required],
+      emailId: [, Validators.required],
+    });
   }
 
 

@@ -1,0 +1,60 @@
+[
+	{
+		"name": "gestion de usuarios",
+		"value": "admin",
+		"acceso":[
+			"usuarios"
+		]
+	},
+	{
+		"name": "gestion de pacientes",
+		"value": "paciente",
+		"acceso":[
+			"reservar_cita",
+			"registro_examenes",
+			"historia_clinica",
+			"registro_recetas"
+		]
+	},
+	{
+		"name": "gestion de medicos",
+		"value": "medico",
+		"acceso":[
+			
+			"reservar_cita",
+			"registro_examenes",
+			"historia_clinica",
+			"registro_receta"
+		]
+	},
+	{
+		"name": "gestion de citas",
+		"value": "admin",
+		"acceso":[
+			
+			"historia_clinica",
+			"agenda_medicos",
+			"visualizar_examen",
+			"registrar_receta",
+			"imprimir_receta",
+			"operaciones_cita"
+
+		]
+	},
+	{
+		"name": "gestion de examanes",
+		"value": "admin",
+		"acceso":[
+			"solicitud_examen",
+			"registro_resultados",
+			"operaciones_examen"
+		]
+	},
+	{
+		"name": "gestion de especialidades",
+		"value": "admin",
+		"acceso":[
+			"operaciones_especialidad"
+		]
+	}
+]

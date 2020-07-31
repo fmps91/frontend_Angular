@@ -69,14 +69,36 @@ export class BuscarComponent implements OnInit, AfterContentInit {
 
   actualizarNote(rowVal) {
     console.log('row  ',rowVal+"   id: "+rowVal['id']);
-    var route = this.router.config.find(r => r.path === 'actualizar/:id');
+    var route = this.router.config.find(r => r.path === 'actualizar_usuario/:id');
     route.data = rowVal;
 
     //console.log('row  ',rowVal['id']);
 
-    this.router.navigateByUrl(`${'actualizar'}/${rowVal.id}`);
+    this.router.navigateByUrl(`${'actualizar_usuario'}/${rowVal.id}`);
     //this.router.navigateByUrl(`${'actualizar'}/${'1'}`);
 
+  }
+
+
+  anadirRol(id){
+   
+    this.user.DeleteUser(id).subscribe(() => {
+      this.listarNotes();
+    });
+  }
+
+  eliminarRol(id){
+   
+    this.user.DeleteUser(id).subscribe(() => {
+      this.listarNotes();
+    });
+  }
+
+  actualizarRol(id){
+   
+    this.user.DeleteUser(id).subscribe(() => {
+      this.listarNotes();
+    });
   }
 
 

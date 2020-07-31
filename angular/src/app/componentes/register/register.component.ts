@@ -14,10 +14,10 @@ export class RegisterComponent implements OnInit {
 
     stud = [
       {
-        name:"paciente"
+        name:"Masculino"
       },
       {
-        name:"doctor"
+        name:"Femenino"
       }
     ];
   constructor(private fb: FormBuilder,

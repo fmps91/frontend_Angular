@@ -1,0 +1,48 @@
+<app-nav></app-nav>
+<h3>Actualizar Medico</h3>
+
+
+ <div style="margin-bottom: 1em;" *ngIf="customerData">
+    <div>
+      <span> Nombre : </span> <span> {{customerData.firstName}} {{customerData.lastName}}  </span>
+    </div>
+    <div>
+      <span> Correo : </span> <span> {{customerData.emailId}} </span>
+    </div>
+
+  </div>
+
+  <form  class="was-validated" [formGroup]="angForm" (ngSubmit)="actualizareNote()">
+      <div class="form-group">
+          <label for="">firtname</label>
+          <input type="text" class="form-control" placeholder="Name of the firstname *" formControlName="firstName" required value="{{customerData.firstName}}" /> <!-- value="{{customerData.firstName}}" -->
+      </div>
+
+      <div class="form-group">
+        <label for="">lastname</label>
+        <input type="text" class="form-control" placeholder="Name of the lastname *" formControlName="lastName" required value="{{customerData.lastName}}" />  <!-- value="{{customerData.lastName}}" -->
+
+      </div>
+
+      <div class="form-group">
+        <label for="">emailId</label>
+        <input type="text" class="form-control" placeholder="Name of the email *" formControlName="emailId" required value="{{customerData.emailId}}" />  <!-- value="{{customerData.lastName}}" -->
+
+      </div>
+
+      <div class="row">
+          <div class="col">
+              <div class="form-group">
+                  <input type="submit" class="btnSubmit" value="Guardar" [disabled]='!angForm.valid' />
+              </div>
+          </div>
+          <div class="col">
+              <div class="form-group">
+                  <input type="button" value="Borrar" (click)="borrar()"  />
+              </div>
+          </div>
+      </div>
+  </form>
+
+
+  <a routerLink="/buscar_usuario"> Regresar </a>
