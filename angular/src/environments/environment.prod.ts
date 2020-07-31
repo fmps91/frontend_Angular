@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  base: 'http://172.17.0.1:8090/api/v1/',
+  base: 'localhosts:8090/api/v1/',
   //base: 'http://192.168.99.100:8090/api/v1/',
 
   port: '',
