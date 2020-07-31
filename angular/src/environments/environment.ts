@@ -8,7 +8,9 @@ export const environment = {
   production: false,
   //base: 'http://3.128.197.124:8090/api/v1/',
   //base: 'http://localhost:8090/api/v1/',
-  base: 'http://192.168.99.100:8090/api/v1/',
+  //base: 'http://192.168.99.100:8090/api/v1/',
+  base: 'http://10.5.0.6:8090/api/v1/',
+  
   port: '',
   ancho: 0,
   alto: 0,
