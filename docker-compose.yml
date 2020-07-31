@@ -24,6 +24,9 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_PORT=5432
+    networks:
+      red2:
+        ipv4_address: 10.7.0.6
     #links:
       #- gestion_usuarios
     #depends_on:
@@ -72,4 +75,9 @@ services:
 #   front-tier:
 #   back-tier:
 
-    
+networks:
+  red2:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.7.0.0/16
