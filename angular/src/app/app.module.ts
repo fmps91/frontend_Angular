@@ -38,25 +38,32 @@ import { FilterPipe } from './pipes/filter.pipe';
 
 //pdf complemento
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
-import { AutenticacionComponent } from './componentes/autenticacion/autenticacion.component';
 
 
-var firebaseConfig = {
-  apiKey: "AIzaSyAqNMc7u-LXQP_vUuHDZeidIyWEXyoyZ78",
-  authDomain: "beberloja.firebaseapp.com",
-  databaseURL: "https://beberloja.firebaseio.com",
-  projectId: "beberloja",
-  storageBucket: "beberloja.appspot.com",
-  messagingSenderId: "410310070682",
-  appId: "1:410310070682:web:8ac87ae84acbd45422ea23",
-  measurementId: "G-GQE79D72ER"
-};
-//angularfire2
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { PacienteComponent } from './componentes/paciente/paciente.component';
+import { DoctorComponent } from './componentes/doctor/doctor.component';
+import { HistoriaClinicaComponent } from './componentes/historia-clinica/historia-clinica.component';
+import { RegistroRecetasComponent } from './componentes/registro-recetas/registro-recetas.component';
+import { RegistroExamenesComponent } from './componentes/registro-examenes/registro-examenes.component';
+import { GestionUsuariosComponent } from './componentes/gestion-usuarios/gestion-usuarios.component';
+import { GestionPacientesComponent } from './componentes/gestion-pacientes/gestion-pacientes.component';
+import { GestionMedicosComponent } from './componentes/gestion-medicos/gestion-medicos.component';
+import { GestionCitasComponent } from './componentes/gestion-citas/gestion-citas.component';
+import { GestionExamanesComponent } from './componentes/gestion-examanes/gestion-examanes.component';
+import { GestionEspecialidadesComponent } from './componentes/gestion-especialidades/gestion-especialidades.component';
 //import firebase from 'firebase/app';
+
+
+import {ActualizarPacienteComponent} from './componentes/actualizar_paciente/actualizar_paciente.component';
+import {CrearPacienteComponent} from './componentes/crear_paciente/crear_paciente.component';
+import {BuscarPacienteComponent} from './componentes/buscar_paciente/buscar_paciente.component';
+
+
+import {ActualizarMedicoComponent} from './componentes/actualizar_medico/actualizar_medico.component';
+import {CrearMedicoComponent} from './componentes/crear_medico/crear_medico.component';
+import {BuscarMedicoComponent} from './componentes/buscar_medico/buscar_medico.component';
+import { RegistrarCitaComponent } from './componentes/registrar-cita/registrar-cita.component';
+
 
 
 @NgModule({
@@ -76,8 +83,27 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
     FilterPipe,
     PerfilComponent,
     PdfComponent,
-    AutenticacionComponent
+    PacienteComponent,
+    DoctorComponent,
+    HistoriaClinicaComponent,
+    RegistroRecetasComponent,
+    RegistroExamenesComponent,
+    GestionUsuariosComponent,
+    GestionPacientesComponent,
+    GestionMedicosComponent,
+    GestionCitasComponent,
+    GestionExamanesComponent,
+    GestionEspecialidadesComponent,
 
+
+    ActualizarPacienteComponent,
+    CrearPacienteComponent,
+    BuscarPacienteComponent,
+
+    ActualizarMedicoComponent,
+CrearMedicoComponent,
+BuscarMedicoComponent,
+RegistrarCitaComponent,
   ],
   imports: [
     BrowserModule,
@@ -86,10 +112,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
     ReactiveFormsModule,
     HttpClientModule,
     NgxExtendedPdfViewerModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    AngularFirestoreModule
+    
   ],
   providers: [
     FormBuilder,

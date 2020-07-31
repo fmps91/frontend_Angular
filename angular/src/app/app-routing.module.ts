@@ -11,8 +11,18 @@ import { MainComponent } from "./componentes/main/main.component";
 import { CrearComponent } from './componentes/crear/crear.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
 
-import { AutenticacionComponent } from "./componentes/autenticacion/autenticacion.component";
 import { ActualizarComponent } from './componentes/actualizar/actualizar.component';
+
+
+
+import { GestionUsuariosComponent } from './componentes/gestion-usuarios/gestion-usuarios.component';
+
+
+import { GestionPacientesComponent } from './componentes/gestion-pacientes/gestion-pacientes.component';
+
+import { HistoriaClinicaComponent} from './componentes/historia-clinica/historia-clinica.component';
+
+
 
 const routes: Routes = [
   {path:'',redirectTo:'/main',pathMatch:"full"},
@@ -21,11 +31,21 @@ const routes: Routes = [
   {path:'profeli', component:ProfeliComponent},
   {path:'perfil/:id', component:PerfilComponent},
   {path:'main', component:MainComponent},
-  {path:'listar', component:ListarComponent},
-  {path:'buscar', component:BuscarComponent},
-  {path:'crear', component:CrearComponent},
-  {path:'fire', component:AutenticacionComponent},
-  {path:'actualizar/:id', component:ActualizarComponent},
+  //{path:'listar_usuario', component:ListarComponent},
+  
+  //{path:'fire', component:AutenticacionComponent},
+  {path:'actualizar_usuario/:id', component:ActualizarComponent},
+
+
+  //gestion de usuarios
+  {path:'usuarios', component:GestionUsuariosComponent},
+  {path:'buscar_usuario', component:BuscarComponent},
+  {path:'crear_usuario', component:CrearComponent},
+
+  //gestion de usuarios
+  {path:'historia_clinica', component:HistoriaClinicaComponent},
+  {path:'buscar_usuario', component:BuscarComponent},
+  {path:'crear_usuario', component:CrearComponent},
 
 
 ];

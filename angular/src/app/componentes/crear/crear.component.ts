@@ -13,7 +13,14 @@ import * as $ from 'jquery';
   styleUrls: ['./crear.component.css']
 })
 export class CrearComponent implements OnInit,AfterViewInit {
-
+  stud = [
+    {
+      name:"paciente"
+    },
+    {
+      name:"doctor"
+    }
+  ];
   angForm: FormGroup;
   save: Nota = {
     nombre: "",
@@ -30,8 +37,11 @@ export class CrearComponent implements OnInit,AfterViewInit {
     private router: Router
   ) {
     this.angForm = this.fb.group({
-      nombre: ['', Validators.required],
-      texto: ['', Validators.required]
+      nombres:['',Validators.required],
+      apellidos:['',Validators.required],
+      email: ['',Validators.required],
+      password: ['',Validators.required],
+      rol: ['',Validators.required]
     });
   }
 
@@ -42,7 +52,7 @@ export class CrearComponent implements OnInit,AfterViewInit {
   }
 
 
-  createNote() {
+  crearUser() {
     this.message = true;
     this.note.urlShow();
     //console.log(this.angForm.value);
@@ -54,7 +64,7 @@ export class CrearComponent implements OnInit,AfterViewInit {
     //var l=JSON.stringify(this.save);
     //var l = this.save;
     console.log(this.angForm.value);
-    this.note.saveRol(this.angForm.value);
+    //this.note.saveRol(this.angForm.value);
 
     //$().alert('close')
 
@@ -72,7 +82,10 @@ export class CrearComponent implements OnInit,AfterViewInit {
     });
   }
 
-
+  valueChange(event){
+    console.log("selected value",event.target.value);
+    //this.selected = event.target.value;
+  }
 
 
 

@@ -3,6 +3,7 @@ import { SessionService } from "../../servicios/session.service";
 import { UsuarioService } from "../../servicios/usuario.service";
 
 import { Router } from '@angular/router';
+import { ConfiguracionService } from 'src/app/servicios/configuracion.service';
 
 
 @Component({
@@ -25,7 +26,7 @@ export class MainComponent implements OnInit {
   constructor(
     public auth: SessionService,
     public ip: UsuarioService,
-
+    private conf:ConfiguracionService,
     private router: Router
   ) { }
 
@@ -43,12 +44,7 @@ export class MainComponent implements OnInit {
 
       this.router.navigate(['profeli']);
     }else{
-      this.ip.getIPAddress().subscribe(res=>{
-        this.ip_adres=res['ip']
-        console.log("ip "+ res['ip']);
-        
-        
-      })
+    
     }
 
 

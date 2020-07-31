@@ -19,7 +19,7 @@ export class SessionService {
   ) { }
 
   sessionIniciada(data: any) {
-    console.log("estamos en session iniciada " + data)
+    //console.log("estamos en session iniciada " + data)
     if (data != null) {
       localStorage.setItem("userId", data[0]);
       localStorage.setItem("first_name", data[1]);
@@ -29,7 +29,7 @@ export class SessionService {
 
         this.router.navigate(['/main']);
       } else if (data[4] == "paciente") {
-
+        
       } else if (data[4] == "medico") {
 
       }
@@ -76,6 +76,10 @@ export class SessionService {
 
   obtenerSession(): String {
     return localStorage.getItem('userId');
+  }
+
+  obtenerRol(): String {
+    return localStorage.getItem('rol');
   }
 
   obtenerUser(): any {

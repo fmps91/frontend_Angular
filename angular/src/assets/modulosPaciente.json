@@ -1,0 +1,13 @@
+[
+	
+	{
+		"name": "gestion de pacientes",
+		"value": "paciente",
+		"acceso":[
+			"reservar_cita",
+			"registro_examenes",
+			"historia_clinica",
+			"registro_recetas"
+		]
+	}
+]
