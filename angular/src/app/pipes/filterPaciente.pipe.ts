@@ -4,7 +4,7 @@ import { IfStmt } from '@angular/compiler';
 @Pipe({
   name: 'filter'
 })
-export class FilterPipe implements PipeTransform {
+export class FilterPacientePipe implements PipeTransform {
 
   transform(value: any, args: any): any {
     if(args === '' || args.length < 3) return value;

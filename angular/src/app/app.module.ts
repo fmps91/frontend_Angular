@@ -5,7 +5,7 @@ import { FormsModule,FormBuilder,Validators,ReactiveFormsModule } from '@angular
 
 import { HttpClientModule } from "@angular/common/http";
 
-//componentes
+//componentes 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +35,10 @@ import bootstrap from "bootstrap";
 
 //filtrar o buscar
 import { FilterPipe } from './pipes/filter.pipe';
+
+import { FilterMedicoPipe } from './pipes/filterMedico.pipe';
+import { FilterPacientePipe } from './pipes/filterPaciente.pipe';
+//import { FilterPipe } from './pipes/filter.pipe';
 
 //pdf complemento
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
@@ -80,7 +84,12 @@ import { RegistrarCitaComponent } from './componentes/registrar-cita/registrar-c
     ProfeliComponent,
     MainComponent,
     CrearComponent,
+
     FilterPipe,
+    FilterMedicoPipe,
+    FilterPacientePipe ,
+ 
+
     PerfilComponent,
     PdfComponent,
     PacienteComponent,
