@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { UsuarioService } from 'src/app/servicios/usuario.service';
+import { HistoriaService } from 'src/app/servicios/historia.service';
 
 @Component({
   selector: 'app-historia-clinica',
@@ -21,7 +21,7 @@ export class HistoriaClinicaComponent implements OnInit {
       }
     ];
   constructor(private fb: FormBuilder,
-    private user: UsuarioService
+    private historia: HistoriaService
     ) {
 
     this.angForm = this.fb.group({
@@ -44,8 +44,9 @@ export class HistoriaClinicaComponent implements OnInit {
     //console.log(this.angForm.value.email);
     //console.log(this.angForm.value.password);
     //this.user.findUser(this.angForm.value);
-    this.user.urlShow();
+    this.historia.urlShow();
     console.log(this.angForm.value)
+    this.historia.saveHistoria(this.angForm.value);
     //this.user.saveUser(this.angForm.value);
   }
 

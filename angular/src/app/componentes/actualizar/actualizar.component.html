@@ -12,7 +12,7 @@
 
   </div>
 
-  <form  class="was-validated" [formGroup]="angForm" (ngSubmit)="actualizareNote()">
+  <form  class="was-validated" [formGroup]="angForm" (ngSubmit)="actualizareuser()">
       <div class="form-group">
           <label for="">firtname</label>
           <input type="text" class="form-control" placeholder="Name of the firstname *" formControlName="firstName" required value="{{customerData.firstName}}" /> <!-- value="{{customerData.firstName}}" -->
@@ -33,7 +33,7 @@
       <div class="row">
           <div class="col">
               <div class="form-group">
-                  <input type="submit" class="btnSubmit" value="Guardar" [disabled]='!angForm.valid' />
+                  <input type="submit" class="btnSubmit" value="Guardar" />
               </div>
           </div>
           <div class="col">

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SessionService } from 'src/app/servicios/session.service';
 import { Router, ActivatedRoute, RoutesRecognized, NavigationEnd, ChildActivationEnd } from '@angular/router';
-import { NotaService } from 'src/app/servicios/nota.service';
+import { UsuarioService } from 'src/app/servicios/usuario.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
@@ -15,18 +15,18 @@ export class ActualizarComponent implements OnInit {
   angForm: FormGroup;
   customerData: any;
 
-  notes:any[]=[];
+  users:any[]=[];
 
-  data:any={
+  /* data:any={
     nombre:"",
     texto:"",
     id:""
-    };
+    }; */
 
   constructor(
     private session: SessionService,
     private router: Router,
-    private note: NotaService,
+    private user: UsuarioService,
     private fb: FormBuilder,
     private route: ActivatedRoute
   ) {
@@ -58,13 +58,13 @@ export class ActualizarComponent implements OnInit {
 
   }
 
-  actualizareNote() {
+  actualizareuser() {
 
-    this.data.nombre = this.angForm.value.nombre;
+   /*  this.data.nombre = this.angForm.value.nombre;
     this.data.texto = this.angForm.value.texto;
-    this.data.id = this.customerData['id'];
-    //console.log(this.data);
-    this.note.UpdateNote(this.data);
+    this.data.id = this.customerData['id']; */
+    console.log(this.angForm.value);
+    this.user.UpdateUser(this.angForm.value);
   }
 
   borrar() {

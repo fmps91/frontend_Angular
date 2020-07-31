@@ -42,7 +42,7 @@ const routes: Routes = [
   {path:'buscar_usuario', component:BuscarComponent},
   {path:'crear_usuario', component:CrearComponent},
 
-  //gestion de usuarios
+  //gestion de paciente
   {path:'historia_clinica', component:HistoriaClinicaComponent},
   {path:'buscar_usuario', component:BuscarComponent},
   {path:'crear_usuario', component:CrearComponent},

@@ -14,10 +14,10 @@ export class RegisterComponent implements OnInit {
 
     stud = [
       {
-        name:"Masculino"
+        name:"paciente"
       },
       {
-        name:"Femenino"
+        name:"doctor"
       }
     ];
   constructor(private fb: FormBuilder,
@@ -25,11 +25,11 @@ export class RegisterComponent implements OnInit {
     ) {
 
     this.angForm = this.fb.group({
-      nombres:['',Validators.required],
-      apellidos:['',Validators.required],
-      email: ['',Validators.required],
+      firstName:['',Validators.required],
+      lastName:['',Validators.required],
+      emailId: ['',Validators.required],
       password: ['',Validators.required],
-      rol: ['',Validators.required]
+      nombre: ['',Validators.required]
     });
   }
 
@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit {
     //this.user.findUser(this.angForm.value);
     this.user.urlShow();
     console.log(this.angForm.value)
-    //this.user.saveUser(this.angForm.value);
+    this.user.saveUser(this.angForm.value)
   }
 
   valueChange(event){

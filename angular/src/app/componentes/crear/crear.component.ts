@@ -1,11 +1,10 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { NotaService } from 'src/app/servicios/nota.service';
-import { Nota } from "../../interfaces/nota";
 import { SessionService } from 'src/app/servicios/session.service';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import * as $ from 'jquery';
+import { UsuarioService } from 'src/app/servicios/usuario.service';
 
 @Component({
   selector: 'app-crear',
@@ -22,26 +21,22 @@ export class CrearComponent implements OnInit,AfterViewInit {
     }
   ];
   angForm: FormGroup;
-  save: Nota = {
-    nombre: "",
-    texto: "",
-    idUser: ""
-  }
+  
 
   message = false;
 
   constructor(
     private fb: FormBuilder,
-    private note: NotaService,
+    private user: UsuarioService,
     private session: SessionService,
     private router: Router
   ) {
     this.angForm = this.fb.group({
-      nombres:['',Validators.required],
-      apellidos:['',Validators.required],
-      email: ['',Validators.required],
+      firstName:['',Validators.required],
+      lastName:['',Validators.required],
+      emailId: ['',Validators.required],
       password: ['',Validators.required],
-      rol: ['',Validators.required]
+      nombre: ['',Validators.required]
     });
   }
 
@@ -54,7 +49,7 @@ export class CrearComponent implements OnInit,AfterViewInit {
 
   crearUser() {
     this.message = true;
-    this.note.urlShow();
+    this.user.urlShow();
     //console.log(this.angForm.value);
    /*  this.save.idUser = this.session.obtenerSession().toString();
     this.save.nombre = this.angForm.value.nombre;
@@ -63,6 +58,7 @@ export class CrearComponent implements OnInit,AfterViewInit {
     //console.log(this.save);
     //var l=JSON.stringify(this.save);
     //var l = this.save;
+    this.user.saveUser(this.angForm.value)
     console.log(this.angForm.value);
     //this.note.saveRol(this.angForm.value);
 

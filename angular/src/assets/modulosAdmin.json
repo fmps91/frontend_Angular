@@ -24,16 +24,17 @@
 			"reservar_cita",
 			"registro_examenes",
 			"historia_clinica",
-			"registro_receta"
+			"visualizar_citas",
+			"registrar_receta",
+			"imprimir_receta"
 		]
 	},
 	{
 		"name": "gestion de citas",
 		"value": "admin",
 		"acceso":[
+
 			
-			"historia_clinica",
-			"agenda_medicos",
 			"visualizar_examen",
 			"registrar_receta",
 			"imprimir_receta",
